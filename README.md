@@ -1,2 +1,2 @@
-# windows_batch_files
-A repository to help give more control over Windows
+# Windows Batch Files
+This repository is to help give more control over Windows via scripts.
