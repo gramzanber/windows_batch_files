@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; This registry edit will allow you to install Windows 11 via the installation
+; tool by letting it skip the TPM and CPU requirements imposed by Microsoft.
+; Designed by Nathanial Tachibana
+
+[HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup]
+"AllowUpgradesWithUnsupportedTPMOrCPU"=dword:00000001
