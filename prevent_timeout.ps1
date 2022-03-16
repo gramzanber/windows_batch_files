@@ -2,6 +2,8 @@
 # Set-ExecutionPolicy Unrestricted - Permanent and for all users
 # Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted - Permanent and for current user
 # powershell –ExecutionPolicy ByPass –File script.psl - One time bypass
+#
+# Key name refrence: https://ss64.com/vb/sendkeys.html
 
 # Get the important info from the user
 Write-Host -NoNewline "Keep Windows awake, how often (minutes)? "
