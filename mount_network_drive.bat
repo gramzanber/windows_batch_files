@@ -1,7 +1,20 @@
-Rem This line is to let the users know what is happening
-@echo Auto mounting network drives
+Rem removing the verbose nature of windows scripts
+@echo off
 
-Rem This Line will remove the mounted drive so the mount does not error out
-net use T: /delete
-Rem This line mounts the drive, if the path contains spaces encapsulate with ""
-net use T: \\<<address>>\<<path>> /persistent:yes /u:<<username>> <<password>>
+Rem Script variables please change to match the payload data
+set "server=<<address>>"
+
+Rem Checking if the connection is valid, throws viewable error if not
+@echo Checking server status
+Rem the >nul makes the output go nowhere so the user does not see the result of the ping
+ping -4 -n 1 %server% | find "TTL=" >nul
+IF %errorlevel% == 0 (
+	@echo Auto mounting network drives
+
+	Rem This will mount the connection if it does not exist already
+	if not exist T:\ (
+		net use T: \\%server%\<<path>> /persistent:yes /u:<<username>> <<password>>
+	)
+) ELSE (
+	@echo Server unreachable.
+)
