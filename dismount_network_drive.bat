@@ -1,5 +1,5 @@
-Rem removing the verbose nature of windows scripts
 @echo off
+Rem removing the verbose nature of windows scripts
 
 Rem This line is to let the users know what is happening
 @echo Removing mounted network drives

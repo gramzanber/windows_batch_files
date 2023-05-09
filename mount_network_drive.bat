@@ -1,5 +1,5 @@
-Rem removing the verbose nature of windows scripts
 @echo off
+Rem removing the verbose nature of windows scripts
 
 Rem Script variables please change to match the payload data
 set "server=<<address>>"
